@@ -214,8 +214,8 @@
 }
 
 .mkp-header-icons__item--menu img {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 44px;
 }
 
 
@@ -261,6 +261,47 @@
     letter-spacing: 2px;
     text-align: center;
   }
+}
+@media (max-width: 435px) {
+
+  .mkp-header-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* ==============================
+     MOBILE ICON ORDER
+  ============================== */
+  .mkp-header-icons__item--wishlist {
+    order: 1;   /* first */
+  }
+
+  .mkp-header-icons__item--cart-mobile {
+    order: 2;   /* second */
+  }
+
+  .mkp-header-icons__item--profile {
+    order: 3;   /* third */
+  }
+
+  .mkp-header-icons__item--menu {
+    order: 4;   /* last */
+  }
+
+  /* Hide desktop-only icons */
+  .mkp-header-icons__item--search,
+  .mkp-header-icons__item--cart {
+    display: none;
+  }
+
+  /* Show mobile-only icons */
+  .mkp-header-icons__item--cart-mobile,
+  .mkp-header-icons__item--menu,
+  .mkp-header-icons__item--wishlist {
+    display: flex;
+  }
+
 }
 
 
@@ -345,7 +386,7 @@
      HERO SECTION (MOBILE)
   ================================ */
   .mkp-hero {
-    width: 360px;
+    width: 100%;
     height: 475px;
     margin: 0 auto;
     position: relative;
@@ -359,7 +400,7 @@
     width: 330px;
     height: 287px;
     top: 205px;
-    left: 16px;
+    left: 1px;
     gap: 33px;
     margin: 0 auto;
     display: flex;
