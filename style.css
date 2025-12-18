@@ -1,0 +1,415 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* ==============================
+   HEADER CONTAINER
+================================ */
+.mkp-header {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 1442px;              /* full desktop width */
+  background-color: #ffffff;
+  padding-left: 70px;         /* center header relative to hero */
+  padding-right: 70px;
+  box-sizing: border-box;
+}
+
+
+.mkp-header__inner {
+  max-width: 1440px;          /* from Figma width */
+  margin: 0 auto;            /* center container */
+  height: 57px;              /* design height */
+  padding: 0 16px;           /* mobile side padding */
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mkp-header__logo {
+  display: flex;
+  align-items: center;
+  height: 57px;
+}
+
+.mkp-header__logo img {
+  max-width: 197px;
+  height: auto;
+  display: block;
+}
+/* ==============================
+   HEADER ICONS CONTAINER
+================================ */
+.mkp-header-icons {
+  display: flex;
+  align-items: center;
+  gap: 37px; /* space between icons */
+  height: 24px; /* container height matches icon height */
+}
+.mkp-header-icons__item img {
+  display: block;
+  width: 24px;  /* Search, Heart, Profile */
+  height: 24px;
+}
+/* Cart icon (desktop) */
+.mkp-header-icons__item--cart img {
+  width: 65.555px;
+  height: 16px;
+}
+
+/* ==============================
+   NAV CONTAINER
+================================ */
+.mkp-nav {
+  display: flex;
+  align-items: center;
+}
+.mkp-nav__list {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+
+  height: 36px;
+  padding: 10px 0;
+
+  margin: 0;
+  list-style: none;
+}
+.mkp-nav__item {
+  display: flex;
+  align-items: center;
+}
+.mkp-nav__link {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 13.2px;
+
+  text-transform: uppercase;
+  color: #121212;
+
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+/* Hide mobile-only icons on desktop */
+.mkp-header-icons__item--cart-mobile,
+.mkp-header-icons__item--menu {
+  display: none;
+}
+
+
+
+
+
+@media (max-width: 435px) {
+
+  /* ==============================
+     HEADER (MOBILE)
+  ================================ */
+  .mkp-header {
+    width: 360px;        /* mobile width */
+    padding-left: 0;     /* remove desktop padding */
+    padding-right: 0;
+    margin: 0 auto;      /* center horizontally */
+  }
+
+  .mkp-header__inner {
+    width: 100%;
+    height: 50px;
+    padding: 12px 16px;  /* internal spacing for icons/logo */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* ==============================
+     LOGO (MOBILE)
+  ================================ */
+  .mkp-header__logo img {
+    width: 89px;
+    height: 26px;
+  }
+
+  /* ==============================
+     HIDE DESKTOP NAV & ICONS
+  ================================ */
+  .mkp-nav,
+  .mkp-header-icons__item--search,
+  .mkp-header-icons__item--cart {
+    display: none;
+  }
+
+  /* ==============================
+     SHOW MOBILE ICONS
+  ================================ */
+  .mkp-header-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* ==============================
+   HEART ICON
+============================== */
+.mkp-header-icons__item--wishlist {
+  display: flex;
+  width: 20px;
+  height: 24px;
+  padding: 4px;
+  align-items: center;
+  justify-content: center;
+}
+
+.mkp-header-icons__item--wishlist img {
+  width: 20px;
+  height: 24px;
+}
+
+/* ==============================
+   CART-R ICON
+============================== */
+.mkp-header-icons__item--cart-mobile {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+  align-items: center;
+  justify-content: center;
+}
+
+.mkp-header-icons__item--cart-mobile img {
+  width: 34px;
+  height: 44px;
+}
+
+/* ==============================
+   PROFILE ICON
+============================== */
+.mkp-header-icons__item--profile {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+  align-items: center;
+  justify-content: center;
+}
+
+.mkp-header-icons__item--profile img {
+  width: 24px;
+  height: 24px;
+}
+
+/* ==============================
+   MENU ICON
+============================== */
+.mkp-header-icons__item--menu {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  padding: 0; /* menu has no extra padding */
+  align-items: center;
+  justify-content: center;
+}
+
+.mkp-header-icons__item--menu img {
+  width: 24px;
+  height: 24px;
+}
+
+
+  /* ==============================
+     HERO SECTION (MOBILE)
+  ================================ */
+  .mkp-hero {
+    width: 360px;
+    height: 475px;
+    margin: 0 auto;       /* center hero */
+    position: relative;
+    top: 79px;            /* from design */
+  }
+
+  .mkp-hero__content-wrapper {
+    width: 330px;
+    height: 287px;
+    top: 173px;
+    left: 16px;
+    gap: 33px;
+    margin: 0 auto;       /* center wrapper relative to hero */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .mkp-hero__title {
+    width: 348px;
+    height: 138px;
+    font-size: 32px;
+    line-height: 46px;
+    letter-spacing: 7px;
+    text-align: center;
+  }
+
+  .mkp-hero__subtitle {
+    width: 274px;
+    height: 116px;
+    font-size: 14px;
+    line-height: 29px;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+}
+
+
+
+
+.mkp-hero {
+  position: relative;
+  width: 1440px;
+  height: 737px;
+  margin: 0 auto;      /* center horizontally */
+  opacity: 1;
+  overflow: hidden;
+}
+
+.mkp-hero__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.mkp-hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.mkp-hero__content-wrapper {
+  position: relative;
+  width: 1424px;
+  max-width: 95%;  /* responsive scaling */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 33px;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  z-index: 1;
+}
+/* ==============================
+   HERO TITLE
+================================ */
+.mkp-hero__title {
+  width: 100%;               /* use wrapper width */
+  max-width: 1424px;
+  font-family: 'Lay Grotesk - Trial', sans-serif;
+  font-weight: 600;          /* Semibold */
+  font-size: 75px;
+  line-height: 100px;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* ==============================
+   HERO SUBTITLE
+================================ */
+.mkp-hero__subtitle {
+  width: 100%;
+  max-width: 1079px;
+  font-family: 'Lay Grotesk - Trial', sans-serif;
+  font-weight: 400;          /* Regular */
+  font-size: 24px;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0;
+}
+
+
+
+@media (max-width: 435px) {
+  /* ==============================
+     HERO SECTION (MOBILE)
+  ================================ */
+  .mkp-hero {
+    width: 360px;
+    height: 475px;
+    margin: 0 auto;
+    position: relative;
+    top: 1px; /* distance from top as per design */
+  }
+
+  /* ==============================
+     HERO CONTENT WRAPPER (MOBILE)
+  ================================ */
+  .mkp-hero__content-wrapper {
+    width: 330px;
+    height: 287px;
+    top: 173px;
+    left: 16px;
+    gap: 33px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 1;
+  }
+
+  /* ==============================
+     HERO TITLE (MOBILE)
+  ================================ */
+  .mkp-hero__title {
+    width: 348px;
+    height: 125px;
+    font-family: 'Lay Grotesk - Trial', sans-serif; /* Figma font */
+    font-weight: 500; /* Semibold */
+    font-style: normal;
+    font-size: 32px;
+    line-height: 46px;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
+    color: #ffffff;
+    margin: 0;
+    opacity: 1;
+  
+  }
+
+  /* ==============================
+     HERO SUBTITLE (MOBILE)
+  ================================ */
+  .mkp-hero__subtitle {
+    padding-top: 10px;
+    width: 274px;
+    height: 116px;
+    font-family: 'Lay Grotesk - Trial', sans-serif; /* Figma font */
+    font-weight: 400; /* Regular */
+    font-style: normal;
+    font-size: 14px;
+    line-height: 29px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
+    color: #ffffff;
+    margin: 0;
+    opacity: 1;
+  }
+}
+
