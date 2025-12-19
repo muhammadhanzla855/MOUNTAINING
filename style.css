@@ -11,8 +11,8 @@
   margin-bottom: 10px;
   width: 1442px;              /* full desktop width */
   background-color: #ffffff;
-  padding-left: 70px;         /* center header relative to hero */
-  padding-right: 70px;
+  padding-left: 50px;         /* center header relative to hero */
+  padding-right: 50px;
   box-sizing: border-box;
 }
 
@@ -449,6 +449,234 @@
     text-align: center;
     vertical-align: middle;
     color: #ffffff;
+    margin: 0;
+    opacity: 1;
+  }
+}
+
+
+
+/* ==============================
+   TRAIL BLAZE SECTION
+============================== */
+
+.mkp-trail-blaze-section {
+  width: 1442px;
+  height: 748px;
+  margin-top: 2141px;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+
+  background-image: url('./assets/images/studio.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* CONTENT WRAPPER */
+.mkp-trail-blaze-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* TEXT IMAGE */
+.mkp-trail-blaze-image {
+  width: 1232px;
+  height: 194px;
+  display: block;
+  margin-bottom: 450px;
+}
+
+/* ==============================
+   TWO-COLUMN SECTION
+=============================== */
+
+.mkp-two-column-section {
+  position: relative;
+  width: 100%;               /* use full available width */
+  max-width: 1440px;         /* limit max width */
+  margin: 62px auto 0 auto;  /* top spacing, center horizontally */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns take equal space */
+  column-gap: 24px;          /* space between columns */
+  overflow: hidden;          /* prevent extra scroll */
+  box-sizing: border-box;    /* include padding in width */
+  padding: 0 16px;           /* small horizontal padding */
+}
+
+/* Column common */
+.mkp-column {
+  position: relative;
+  width: 100%;               /* full column width */
+  height: 579px;
+  opacity: 1;
+  overflow: hidden;
+}
+
+/* Column background image */
+.mkp-column-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* Left Overlay Button */
+.mkp-column-overlay-left {
+  position: absolute;
+  width: 377px;
+  height: 43px;
+  top: 493px;       /* relative to column */
+  left: 40px;
+  border-radius: 4px;
+  z-index: 1;
+  opacity: 1;
+}
+
+/* Right Overlay Button */
+.mkp-column-overlay-right {
+  position: absolute;
+  width: 452px;
+  height: 43px;
+  top: 493px;
+  left: 40px; /* place inside right column safely */
+  border-radius: 4px;
+  z-index: 1;
+  opacity: 1;
+}
+
+
+@media (max-width: 435px) {
+
+  /* ==============================
+     TWO-COLUMN SECTION (MOBILE)
+  ================================ */
+
+  .mkp-two-column-section {
+    width: 336px;
+    height: 151px;
+    margin: 0 auto;
+    margin-top: 15px;     /* top: 1566 */
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: 162px 163px;
+    column-gap: 11px;       /* 185 - (12 + 162) */
+
+    opacity: 1;
+    overflow: hidden;
+  }
+
+  /* ==============================
+     LEFT COLUMN
+  ================================ */
+
+  .mkp-column:first-child {
+    width: 162px;
+    height: 151px;
+    opacity: 1;
+  }
+
+  /* ==============================
+     RIGHT COLUMN
+  ================================ */
+
+  .mkp-column:last-child {
+    width: 163px;
+    height: 151px;
+    opacity: 1;
+  }
+
+  /* ==============================
+     BACKGROUND IMAGES
+  ================================ */
+
+  .mkp-column-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* ==============================
+     LEFT OVERLAY IMAGE
+  ================================ */
+
+  .mkp-column-overlay-left {
+    width: 140px;
+    height: 19px;
+    top: 119px;   /* 1685 - 1566 */
+    left: 7px;    /* 19 - 12 */
+    border-radius: 4px;
+    opacity: 1;
+  }
+
+  /* ==============================
+     RIGHT OVERLAY IMAGE
+  ================================ */
+
+  .mkp-column-overlay-right {
+    width: 140px;
+    height: 19px;
+    top: 119px;   /* 1685 - 1566 */
+    left: 7px;    /* 192 - 185 */
+    border-radius: 4px;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 435px) {
+
+  /* ==============================
+     TRAIL BLAZE SECTION (MOBILE)
+  ================================ */
+
+  .mkp-trail-blaze-section {
+    width: 360px;
+    height: 274px;
+
+    margin-top: 1247px;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+    opacity: 1;
+  }
+
+  /* Content wrapper */
+  .mkp-trail-blaze-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  /* Overlay image */
+  .mkp-trail-blaze-image {
+    width: 344px;
+    height: 78px;
+
+    position: absolute;
+    top: 18px;     /* 1265 - 1247 */
+    left: 8px;
+
     margin: 0;
     opacity: 1;
   }
